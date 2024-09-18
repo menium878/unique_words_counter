@@ -1,3 +1,3 @@
-#Counting unique words counter
+# Counting unique words counter
 
 Primitive version of the program.
