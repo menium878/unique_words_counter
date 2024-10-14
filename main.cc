@@ -59,7 +59,7 @@ void process_file(const std::string& filename, int num_threads) {
             buffer.assign(std::istreambuf_iterator<char>(file), std::istreambuf_iterator<char>());
         }
 
-        threads.emplace_back(process_chunk, buffer);
+        threads.emplace_back(process_chunk, buffer); //better than push_back avoids copy so I have construct arg but not the object itself
     }
 
     for (auto& t : threads) {
